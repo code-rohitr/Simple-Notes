@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+
+/* font-family: 'Montserrat', sans-serif; */
+
+
+
+html, body{
+    overflow-x: hidden;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #1e272e;
+}
+
+
+/* ::-moz-selection { 
+    color: red;
+    background: yellow;
+  }
+  
+  ::selection {
+    color: red;
+    background: yellow;
+  } */
+
+.header{
+    /* border: 2px solid red; */
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 2rem;
+    color: #ffd32a;
+}
+
+.input-section{
+    /* border: 2px solid red; */
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-container{
+    /* border: 2px solid red; */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-input{
+    box-sizing: border-box;
+    height: 50px;
+    width: 350px;
+    font-size: 1.5rem;
+    padding: 20px;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 100px 0 0 100px;
+    border: none;
+    font-weight: 500;
+}
+
+.input-container span{
+   background-color: #ffd32a;
+   font-size: 2.2rem;
+   height: 100%;
+    cursor: pointer;
+    user-select: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 50px;
+   border-radius: 0px 100px 100px 0;
+}
+
+.gen-btn:nth-child(2){
+    /* border: 2px solid red; */
+    border-radius: 0px;
+    background-color: white;
+    color: #ffa801;
+    transition: 100ms color ease-in-out;
+
+}
+
+.gen-btn:nth-child(2):hover{
+    color: black;
+}
+
+
+.gen-btn:hover{
+    background-color: #ffdd59;
+}
+
+
+.notes-section{
+    /* background-color: #2a353d; */
+    /* border: 2px solid red; */
+    width: 80%;
+    margin: 0px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px 40px;
+
+}
+
+.notes-container{
+    box-sizing: border-box;
+    background-color: #2a353d;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+}
+
+.note-heading{
+    font-size: 1.5rem;
+}
+
+
+/* MODAL section */
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    
+    height: 500px;
+    width: 70%;
+    /* border: 2px solid red; */
+    background-color: white;
+    border-radius: 20px;
+}
