@@ -26,6 +26,12 @@ body{
     background: yellow;
   } */
 
+
+  /* disable textarea resize */
+  textarea{
+      resize: none;
+  }
+
 .header{
     /* border: 2px solid red; */
     height: 20vh;
@@ -119,6 +125,40 @@ body{
     color: white;
     font-family: 'Montserrat', sans-serif;
     padding: 20px;
+    position: relative;
+}
+
+.delete-note{
+    /* border: 2px solid red; */
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: 100ms color ease-in-out;
+    user-select: none;
+}
+
+.edit-note{
+    position: absolute;
+    padding: 5px;
+    top: 10px;
+    right: 40px;
+    cursor: pointer;
+    transition: 100ms color ease-in-out;
+    user-select: none;
+}
+
+.edit-note:hover{
+    color: #ffd32a;
+}
+
+.delete-note:hover{
+    color: #d63031;
+}
+
+.notes-container p{
+    overflow-y:hidden;
 }
 
 .note-heading{
@@ -128,6 +168,21 @@ body{
 
 /* MODAL section */
 
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.486);
+    user-select: none;
+    display: none;
+}
+
+.display-overlay{
+    display: initial;
+}
+
 .modal{
     position: absolute;
     top: 50%;
@@ -135,8 +190,99 @@ body{
     transform:translate(-50%, -50%);
     
     height: 500px;
-    width: 70%;
+    width: 50%;
     /* border: 2px solid red; */
-    background-color: white;
+    background-color: #dfe6e9;
     border-radius: 20px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* turning off the display */
+    display: none;
+}
+
+.note-modal-heading{
+    font-family: 'Montserrat', sans-serif;
+    /* border: 2px solid red; */
+    width: 100%;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+}
+
+/* add display to modal */
+.display-modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.modal-input{
+    /* border: 2px solid black; */
+    border: none;
+    outline: none;
+    height: 85%;
+    width: 100%;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    background-color: #dfe6e9;
+    position: relative;
+}
+
+/* modal scroll track */
+.modal-input::-webkit-scrollbar-track {
+    background: #b2bec3;
+    border-radius: 100px;
+    cursor: pointer;
+}
+  
+  .modal-input::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: black;
+        border-radius: 100px;
+      }
+.modal span{
+    font-size: 1.8rem;
+    cursor: pointer;
+    /* border: 2px solid red; */
+    padding: 4px;
+}
+
+.close-modal{
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    font-size: 3rem;
+    cursor: pointer;
+    /* border: 2px solid red; */
+}
+
+.modal span:hover{
+    background-color: #1e272e;
+    color: white;
+    border-radius: 100px;
+}
+
+
+
+.add-note{
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
+}
+
+.copy-note{
+    position: absolute;
+    right: 8%;
+    bottom: 3%;
 }

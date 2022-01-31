@@ -26,29 +26,39 @@
     <section class="input-section">
         <div class="input-container">
             <input type="text" class="text-input" placeholder="Enter the Heading">
-            <span class="material-icons gen-btn">clear</span>
-            <span class="material-icons gen-btn">add</span>
+            <span class="material-icons gen-btn clear-btn">clear</span>
+            <span class="material-icons gen-btn open-modal">add</span>
         </div>
     </section>
     
 
     <!-- Loren text section -->
     <section class="notes-section">
-        <div class="notes-container">
+        <!-- <div class="notes-container">
             <h2 class="note-heading">This is the heading</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, illo? Ad id tempora et. Delectus corrupti magnam inventore praesentium totam!</p>
-        </div>
+           <span class="material-icons edit-note">edit</span>
+           <span class="material-icons delete-note">delete</span>
 
-        <div class="notes-container">
+        </div> -->
+
+        <!-- <div class="notes-container">
             <h2 class="note-heading">This is the heading</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, illo? Ad id tempora et. Delectus corrupti magnam inventore praesentium totam!</p>
-        </div>
+            <p>Lorem ipsum dolor sit amet lorem10 consectetur adipisicing elit. Nobis, illo? Ad id tempora et. Delectus corrupti magnam inventore praesentium totam!</p>
+        </div> -->
     </section>
 
 
-    <!-- modal section -->
-    <section class="modal">
-        <input type="text" class="modal-input">
+    <!-- add note modal section -->
+    <div class="overlay"></div>
+    <section class="modal add-note-modal">
+        <h3 class="note-modal-heading"></h3>
+       <textarea name="modal-input" id="modal-input" class="modal-input" cols="25" rows="10" placeholder="Enter your note here..."></textarea>
+       <span class="material-icons close-modal">clear</span>
+       <span class="material-icons add-note">add</span>
+       <span class="material-icons copy-note">content_copy</span>
+
     </section>
+
 </body>
 </html>
